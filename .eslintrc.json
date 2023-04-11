@@ -1,3 +1,41 @@
 {
-  "extends": "next/core-web-vitals"
+	"root": true,
+	"extends": [
+		"next",
+		"next/core-web-vitals",
+		"./.eslint/main.js",
+		"prettier"
+	],
+	"overrides": [
+		{
+			"files": ["*.tsx"],
+			"rules": {
+				"jsdoc/require-jsdoc": "off",
+				"jsdoc/require-param": "off",
+				"@typescript-eslint/naming-convention": [
+					"off",
+					{
+						"selector": ["enumMember", "interface"],
+						"format": ["PascalCase"]
+					},
+					{
+						"selector": ["variable", "function", "classMethod"],
+						"leadingUnderscore": "allow",
+						"trailingUnderscore": "allow",
+						"format": ["camelCase"]
+					}
+				]
+			}
+		}
+	],
+	"rules": {
+		"@next/next/no-img-element": "off",
+		"no-unused-vars": [
+			"error",
+			{
+				"argsIgnorePattern": "^_"
+			}
+		],
+		"eqeqeq": ["error", "always"]
+	}
 }
