@@ -30,7 +30,7 @@ export class UserService extends HttpClient {
 	 *
 	 * @param username The username for the user.
 	 * @param password The entered password for the user.
-	 * @returns The player and access/refresh tokens... .
+	 * @returns The player and access/refresh tokens.
 	 */
 	signIn = (username: string, password: string): Promise<[]> => {
 		return this.post(`/${pathProxy}/${apiRest}/auth/loginExternalNew`, {
