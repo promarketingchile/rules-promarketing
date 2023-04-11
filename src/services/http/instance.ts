@@ -1,6 +1,5 @@
 import { $fetch } from 'ohmyfetch';
 
-
 /**
  * Instance of library fetch.
  *
